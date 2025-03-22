@@ -1,0 +1,19 @@
+server:
+  bind_address: "127.0.0.1"
+  port: 8080
+  max_connections: 100
+  tls:
+    enabled: true
+    cert_path: "certs/cert.pem"
+    key_path: "certs/key.pem"
+
+database:
+  url: "DATABASE_URL" # environment variable
+  max_connections: 30
+
+security:
+  encryption_key: "supersecretkey123"
+  token_expiration: 3600
+
+message:
+  lifespan: 24 # hours
